@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body ng-app="myApp" ng-controller="queryController">
+<p th:text="'Hello, ' + ${title}"/><br/>
+<form role="form">
+    <div class="form-group col-sm-3">
+        <label for="baseAmount" class="sr-only">基本工资</label>
+        <input type="text" class="form-control baseAmount" id="baseAmount" placeholder="baseamount" ng-model="baseAmount">
+    </div>
+    <div class="form-group  col-sm-3">
+        <label for="addTime" class="sr-only">加班时长</label>
+        <input type="text" class="form-control addTime" id="addTime" placeholder="addTime" ng-model="addTime">
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-default toquery" ng-click="queryAmount()"  style="margin-left: 15px !important;">计算</button>
+    </div>
+    <div class="form-group col-sm-3">
+        <label for="getAmount" class="sr-only">money</label>
+        <input type="text" class="form-control getAmount" id="getAmount" placeholder="金额" ng-model="getAmount">
+    </div>
+    <div class="form-group col-sm-3">
+        <label for="firstAmount" class="sr-only">money</label>
+        <input type="text" class="form-control" id="firstAmount" placeholder="first" ng-model="firstAmount">
+    </div>
+    <div class="form-group col-sm-3">
+        <label for="secondAmount" class="sr-only">money</label>
+        <input type="text" class="form-control" id="secondAmount" placeholder="second" ng-model="secondAmount">
+    </div>
+    <div class="form-group col-sm-3">
+        <label for="outAmount" class="sr-only">money</label>
+        <input type="text" class="form-control" id="outAmount" placeholder="out" ng-model="outAmount">
+    </div>
+</form>
+</body>
+<link rel="stylesheet" type="text/css" href="/comcss/bootstrap.min.css">
+<script src="/comjs/jquery-3.3.1.min.js"></script>
+<script src="/comjs/angular.min.js"></script>
+<script src="/comjs/bootstrap.min.js"></script>
+<script src="/perJs/queramout.js"></script>
+</html>
